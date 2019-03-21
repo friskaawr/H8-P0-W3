@@ -26,15 +26,16 @@ function shoppingTime(memberId, money) {
     else{
         history.memberId = memberId; 
         history.money = money;
-    }
-    history.listPurchased = []
+        history.listPurchased = []
 
-    for(var j = 0; j<products.length; j++){
-        if (money >= products[j].price){
-            history.listPurchased.push(products[j].name)
-            money -= products[j].price;
+        for(var j = 0; j<products.length; j++){
+            if (money >= products[j].price){
+                history.listPurchased.push(products[j].name)
+                money -= products[j].price;
+            }
+            history.changeMoney = money;
         }
-        history.changeMoney = money;
+    
     }
     return history;
   }
