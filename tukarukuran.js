@@ -1,12 +1,30 @@
 function tukarBesarKecil(kalimat) {
     // you can only write your code here!
+    var besar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    var kecil = 'abcdefghijklmnopqrstuvwxyz'
     var string = ''
+    // for (var i = 0; i<kalimat.length; i++){
+    //     if(kalimat.charAt(i)===kalimat.charAt(i).toUpperCase()){
+    //         string += kalimat.charAt(i).toLowerCase();
+    //     }
+    //     else{
+    //         string += kalimat.charAt(i).toUpperCase();
+    //     }
+    // }
     for (var i = 0; i<kalimat.length; i++){
-        if(kalimat.charAt(i)===kalimat.charAt(i).toUpperCase()){
-            string += kalimat.charAt(i).toLowerCase();
+        var t = false;
+        for(var j=0; j<kecil.length; j++){
+            if(kalimat[i] === kecil[j]){
+                t = true;
+                string += besar[j]
+            }
+            else if(kalimat[i]===besar[j]){
+                t= true;
+                string += kecil[j]
+            }
         }
-        else{
-            string += kalimat.charAt(i).toUpperCase();
+        if(t===false){
+            string+=kalimat[i];
         }
     }
     return string;
