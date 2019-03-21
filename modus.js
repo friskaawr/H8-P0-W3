@@ -1,7 +1,4 @@
 function cariModus(arr) {
-    // you can only write your code here!
-    // var urut = arr.sort() //(function(a,b){return a-b})
-    // var length = urut.length
     var i 
     var j
     var arr2 = []

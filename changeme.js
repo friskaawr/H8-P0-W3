@@ -3,6 +3,7 @@ function changeMe(arr) {
     if (arr.length === 0){
         console.log('""')
     }
+
     var tampil = {
         firstName: [],
         lastName: [],
@@ -11,7 +12,9 @@ function changeMe(arr) {
     };
 
     for(var i=0; i<arr.length; i++){
+        console.log(i+1 + ". " + arr[i][0] +" " +arr[i][1])
         tampil = {
+
             firstName : arr[i][0],
             lastName : arr[i][1],
             gender : arr[i][2],
