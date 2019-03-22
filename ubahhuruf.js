@@ -6,12 +6,18 @@ function ubahHuruf(kata) {
  for (var i = 0; i<kata.length; i++){
      for (var j=0; j<abjad.length; j++){
          if(kata[i] === abjad[j]){
-             baru += abjad[j+1]
+            if(kata[i] === 'z'){
+                baru += abjad[0];
             }
-         }
+            else{
+                baru += abjad[j+1]
+            } 
+        }
+            
      }
-     return baru;
  }
+ return baru;
+}
   
   // TEST CASES
   console.log(ubahHuruf('wow')); // xpx
@@ -19,3 +25,4 @@ function ubahHuruf(kata) {
   console.log(ubahHuruf('javascript')); // kbwbtdsjqu
   console.log(ubahHuruf('keren')); // lfsfo
   console.log(ubahHuruf('semangat')); // tfnbohbu
+  console.log(ubahHuruf('zah'))
