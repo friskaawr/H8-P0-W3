@@ -29,7 +29,7 @@ function naikAngkot(arrPenumpang) {
                 penumpang : arrPenumpang[i][0],
                 naikDari : rute[awal],
                 tujuan : rute[akhir],
-                bayar : (akhir - awal) * 2000
+                bayar : Math.abs(akhir - awal) * 2000
             });
             
         }
